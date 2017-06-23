@@ -2,7 +2,7 @@ defmodule Sncf.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :sncf,
+    [app: :exncf,
      version: "0.0.1",
      elixir: "~> 1.4",
      build_embedded: Mix.env == :prod,
