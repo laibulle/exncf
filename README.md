@@ -1,6 +1,6 @@
-# Sncf
+# Exncf
 
-**TODO: Add description**
+A simple wrapper for SNCF Open API. 
 
 ## Installation
 
