@@ -3,7 +3,7 @@ defmodule Sncf.Mixfile do
 
   def project do
     [app: :sncf,
-     version: "0.1.0",
+     version: "0.0.1",
      elixir: "~> 1.4",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
@@ -16,6 +16,22 @@ defmodule Sncf.Mixfile do
   def application do
     # Specify extra applications you'll use from Erlang/Elixir
     [extra_applications: [:logger]]
+  end
+
+  defp description do
+    """
+    A small wrapper for SNCF Open API
+    """
+  end
+
+  defp package do
+    [
+    files: ["lib", "mix.exs", "README.md"],
+    maintainers: ["Guillaume Bailleul"],
+    licenses: ["Apache 2.0"],
+    links: %{"GitHub" => "https://github.com/laibulle/exncf",
+              "Docs" => "https://hexdocs.pm/exncf/"}
+    ]
   end
 
   # Dependencies can be Hex packages:
