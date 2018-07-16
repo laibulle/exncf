@@ -2,14 +2,16 @@ defmodule Exncf.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :exncf,
-     version: "0.0.1",
-     elixir: "~> 1.4",
-     build_embedded: Mix.env == :prod,
-     start_permanent: Mix.env == :prod,
-     description: description,
-     package: package,
-     deps: deps()]
+    [
+      app: :exncf,
+      version: "0.0.1",
+      elixir: "~> 1.4",
+      build_embedded: Mix.env() == :prod,
+      start_permanent: Mix.env() == :prod,
+      description: description,
+      package: package,
+      deps: deps()
+    ]
   end
 
   # Configuration for the OTP application
@@ -28,11 +30,13 @@ defmodule Exncf.Mixfile do
 
   defp package do
     [
-    files: ["lib", "mix.exs", "README.md"],
-    maintainers: ["Guillaume Bailleul"],
-    licenses: ["Apache 2.0"],
-    links: %{"GitHub" => "https://github.com/laibulle/exncf",
-              "Docs" => "https://hexdocs.pm/exncf/"}
+      files: ["lib", "mix.exs", "README.md"],
+      maintainers: ["Guillaume Bailleul"],
+      licenses: ["Apache 2.0"],
+      links: %{
+        "GitHub" => "https://github.com/laibulle/exncf",
+        "Docs" => "https://hexdocs.pm/exncf/"
+      }
     ]
   end
 
@@ -49,7 +53,7 @@ defmodule Exncf.Mixfile do
     [
       {:ex_doc, ">= 0.0.0", only: :dev},
       {:poison, "~> 3.1"},
-      {:httpoison, "~> 0.11.2"},
+      {:httpoison, "~> 1.2"}
     ]
   end
 end
