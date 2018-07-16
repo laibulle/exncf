@@ -4,7 +4,7 @@ defmodule Exncf.Mixfile do
   def project do
     [
       app: :exncf,
-      version: "0.0.1",
+      version: "0.0.2",
       elixir: "~> 1.4",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
@@ -24,7 +24,7 @@ defmodule Exncf.Mixfile do
 
   defp description do
     """
-    A small wrapper for SNCF Open API
+    A wrapper for SNCF Open API
     """
   end
 
